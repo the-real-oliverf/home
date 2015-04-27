@@ -1,6 +1,6 @@
 [user]
-  name = Simon Eskildsen
-  email = sirup@sirupsen.com
+  name = Oliver Fisher
+  email = oliverf@shopify.com
 [color]
   branch = auto
   diff = auto
@@ -20,5 +20,3 @@
   rebase = true
 [hub]
   protocol = ssh
-[init]
-  templatedir = ~/.git_template
