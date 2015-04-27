@@ -8,5 +8,3 @@ for file in ~/.bash/*.bash; do
 done
 
 unset DISPLAY
-
-eval "$(fasd --init auto)"
