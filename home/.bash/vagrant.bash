@@ -1,2 +1,2 @@
 #!/bin/bash
-VAGRANT_CWD=~/git/vagrant
+export VAGRANT_CWD=~/git/vagrant
