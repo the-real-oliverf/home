@@ -6,6 +6,7 @@
 #fi
 
 # ls in color and nice variants
+# TODO(oliverf): eat the output of this so it doesn't show
 if ls --version | grep -q GNU; then  # not on Mac
   eval `dircolors ~/.dir_colors`
   alias ls='ls -l --color=auto'
