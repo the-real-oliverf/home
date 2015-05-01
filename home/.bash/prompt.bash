@@ -16,6 +16,8 @@ PS1+="${DIRCOLOR}\\W"
 # from the previous two lines.
 if command -v __git_ps1 > /dev/null 2>&1; then
   PS1+='\[${LIGHT_BLUE}\]$(__git_ps1 " (%s)")'
+else
+  echo '__git_ps1 not installed!'
 fi
 
 # Normalize prompt contents
