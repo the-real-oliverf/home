@@ -26,3 +26,8 @@ alias cd='pushd'
 alias pd='popd'
 alias ..='cd ..'
 alias ...='cd ../..'
+
+# https://github.com/github/hub
+if command -v hub > /dev/null; then
+  alias git=hub
+fi
