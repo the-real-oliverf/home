@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# https://github.com/github/hub
-#if command -v hub > /dev/null; then
-#  alias git=hub
-#fi
-
 # ls in color and nice variants
 # TODO(oliverf): eat the output of this so it doesn't show
 if ls --version | grep -q GNU; then  # not on Mac
@@ -31,3 +26,5 @@ alias ...='cd ../..'
 if command -v hub > /dev/null; then
   alias git=hub
 fi
+
+alias be='bundle exec'
