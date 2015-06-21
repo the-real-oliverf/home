@@ -9,8 +9,10 @@
   ui = auto
 [merge]
   tool = vimdiff
+  conflictStyle = diff3
 [core]
-	editor = atom --wait
+  # Use $EDITOR
+	# editor = atom --wait
 [interactive]
   singlekey = true
 [push]

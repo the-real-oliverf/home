@@ -9,7 +9,7 @@ else
   DIRCOLOR='\[${LIGHT_GREEN}\]'  # vagrant is good
 fi
 
-# Put in current directory only
+# Show current directory only
 PS1+="${DIRCOLOR}\\W"
 
 # If we have __git_ps1 installed, then put it in the prompt. We do what we can
