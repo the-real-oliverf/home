@@ -25,5 +25,3 @@ alias ...='cd ../..'
 if command -v hub > /dev/null; then
   alias git=hub
 fi
-
-alias be='bundle exec'
