@@ -26,3 +26,6 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[alias]
+	rbg = !git rebase `./script/ci_last_green_master`
+	brg = !sh -c 'git checkout -b $1 `./script/ci_last_green_master`' -
