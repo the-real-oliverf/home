@@ -8,6 +8,10 @@ if ! command -v __git_ps1 > /dev/null 2>&1; then
 fi
 
 # Phabricator Arcanist stuff
-export PATH=$PATH:/Users/oliverf/phacility/arcanist/bin/
-source /Users/oliverf/phacility/arcanist/resources/shell/bash-completion
-
+if ls --version 2> /dev/null | grep -q GNU; then  # not on Mac
+  export PATH=$PATH:/home/vagrant/src/phacility/arcanist/bin/
+  source /home/vagrant/src/phacility/arcanist/resources/shell/bash-completion
+else
+  export PATH=$PATH:/Users/oliverf/phacility/arcanist/bin/
+  source /Users/oliverf/phacility/arcanist/resources/shell/bash-completion
+fi
