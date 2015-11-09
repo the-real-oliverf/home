@@ -7,7 +7,7 @@ if ! command -v __git_ps1 > /dev/null 2>&1; then
   source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 fi
 
-# Phabricator Arcanist stuff
+# TODO(oliver): Delete this since Phabricator is gone
 if ls --version 2> /dev/null | grep -q GNU; then  # not on Mac
   export PATH=$PATH:/home/vagrant/src/phacility/arcanist/bin/
   source /home/vagrant/src/phacility/arcanist/resources/shell/bash-completion
