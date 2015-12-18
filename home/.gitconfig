@@ -29,5 +29,5 @@
 [alias]
 	rbg = !git rebase `./script/ci_last_green_master`
 	brg = !sh -c 'git checkout -b $1 `./script/ci_last_green_master`' -
-  cr = !arc diff && git push origin
   amend = commit --amend -C HEAD
+  shupg = !git checkout master && git pull origin master && git checkout - && git rbg && bundle install --jobs 4 && bundle exec rake db:migrate db:test:prepare
