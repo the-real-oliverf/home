@@ -11,8 +11,12 @@
   tool = vimdiff
   conflictStyle = diff3
 [core]
-  # Use $EDITOR
 	# editor = atom --wait
+  editor = code --wait --new-window
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [interactive]
   singlekey = true
 [push]
