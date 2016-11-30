@@ -11,10 +11,11 @@
   tool = vimdiff
   conflictStyle = diff3
 [core]
-	# editor = atom --wait
   editor = code --wait --new-window
 [diff]
   tool = default-difftool
+[difftool]
+	prompt = false
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [interactive]
