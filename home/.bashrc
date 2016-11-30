@@ -8,6 +8,3 @@ for file in ~/.bash/*.bash; do
 done
 
 unset DISPLAY
-
-export NVM_DIR="/Users/oliverf/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
