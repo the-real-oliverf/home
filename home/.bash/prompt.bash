@@ -3,11 +3,7 @@
 # Start from scratch
 PS1=''
 
-if [[ ! $(hostname) =~ vagrant ]]; then
-  DIRCOLOR='\[${LIGHT_YELLOW}\]'  # not on vagrant, beware
-else
-  DIRCOLOR='\[${LIGHT_GREEN}\]'  # vagrant is good
-fi
+DIRCOLOR='\[${LIGHT_YELLOW}\]'
 
 # Show current directory only
 PS1+="${DIRCOLOR}\\W"
