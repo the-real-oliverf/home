@@ -1,5 +1,8 @@
 # Much of this is stolen from https://gist.github.com/jhass/a5ae80d87f18e53e7b56
 
+AllCops:
+  TargetRubyVersion: 2.4
+
 # Commonly used screens these days easily fit more than 80 characters.
 Metrics/LineLength:
   Max: 120
@@ -128,4 +131,8 @@ Style/OpMethod:
 
 # Style preference
 Style/MethodDefParentheses:
+  Enabled: false
+
+# This exists to help upgrades to Ruby 3.0. I don't care.
+Style/FrozenStringLiteralComment:
   Enabled: false
