@@ -41,6 +41,6 @@ setuptools-*
 .rvmrc*
 .rbenv-version
 .ruby-version
+.vscode/
 log/*.log  
 tmp/**/*  
-Procfile.simon

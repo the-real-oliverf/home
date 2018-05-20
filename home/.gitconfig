@@ -12,6 +12,7 @@
   conflictStyle = diff3
 [core]
   editor = code --wait --new-window
+	excludesfile = /home/oliverf/.global_gitignore
 [diff]
   tool = default-difftool
 [difftool]
