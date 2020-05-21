@@ -10,6 +10,3 @@ Use `linker.sh` to clone and symlink dotfiles across machines. Invoke
 it to symlink the dotfiles. It will prompt to override if the files
 already exist.
 
-Here are some changes.
-And some more text.
-And even more.

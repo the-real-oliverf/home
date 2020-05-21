@@ -1,2 +1,5 @@
+# use this file for things that should not be pushed to the public repo
+home/.bash/secret.bash
+
 home/.vim/bundle
 .netrwhist
