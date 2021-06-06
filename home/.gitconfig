@@ -12,11 +12,11 @@
   conflictStyle = diff3
 [core]
   editor = code --wait --new-window
-	excludesfile = /home/oliverf/.global_gitignore
+  excludesfile = ~/.global_gitignore
 [diff]
   tool = default-difftool
 [difftool]
-	prompt = false
+  prompt = false
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [interactive]
@@ -29,11 +29,11 @@
 [hub]
   protocol = ssh
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
 [alias]
-	rbg = !git rebase `./script/ci_last_green_master`
-	brg = !sh -c 'git checkout -b $1 `./script/ci_last_green_master`' -
+  #rbg = !git rebase `./script/ci_last_green_master`
+  #brg = !sh -c 'git checkout -b $1 `./script/ci_last_green_master`' -
   amend = commit --amend -C HEAD
-  shupg = !git checkout master && git pull origin master && git checkout - && git rbg && bundle install --jobs 4 && bundle exec rake db:migrate db:test:prepare
+  #shupg = !git checkout master && git pull origin master && git checkout - && git rbg && bundle install --jobs 4 && bundle exec rake db:migrate db:test:prepare
