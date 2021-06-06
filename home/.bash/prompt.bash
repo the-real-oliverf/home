@@ -3,7 +3,13 @@
 # Start from scratch
 PS1=''
 
+HOSTCOLOR='\[${RED}\]'
 DIRCOLOR='\[${LIGHT_YELLOW}\]'
+
+# Show the hostname if this is a remote ssh session
+if [ ! -z "$SSH_TTY" ] && [ ! -z "$SSH_CLIENT" ] ; then
+  PS1+="${HOSTCOLOR}[\\H] "
+fi
 
 # Show current directory only
 PS1+="${DIRCOLOR}\\W"
