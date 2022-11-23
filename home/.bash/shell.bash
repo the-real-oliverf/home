@@ -7,12 +7,12 @@ set -o notify
 shopt -s nocaseglob
 
 if [[ -x /usr/local/bin/atom ]]; then
-  export EDITOR='/usr/local/bin/atom --wait'
+  export EDITOR='/usr/bin/code --wait'
 else
-  export EDITOR=/usr/bin/vim
-  # Prefer user-installed one
-  if [[ -x /usr/local/bin/vim ]]; then
-    export EDITOR=/usr/local/bin/vim
+  if [[ -x /usr/bin/nano ]]; then
+    export EDITOR='/usr/bin/nano'
+  else
+    export EDITOR=/usr/bin/vim
   fi
 fi
 
