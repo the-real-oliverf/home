@@ -16,7 +16,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # moving around
-#alias cd='pushd'
+alias cd='pushd'
 alias pd='popd'
 alias ..='cd ..'
 alias ...='cd ../..'
