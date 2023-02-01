@@ -6,7 +6,8 @@ if ! command -v __git_ps1 > /dev/null 2>&1; then
     source /usr/share/bash-completion/completions/git
     source /etc/bash_completion.d/git-prompt
   else  # on Mac
-    source /usr/local/etc/bash_completion.d/git-completion.bash
-    source /usr/local/etc/bash_completion.d/git-prompt.sh
+    [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+    # source /usr/local/etc/bash_completion.d/git-completion.bash
+    # source /usr/local/etc/bash_completion.d/git-prompt.sh
   fi
 fi
