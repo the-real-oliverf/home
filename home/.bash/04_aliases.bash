@@ -25,3 +25,9 @@ alias ...='cd ../..'
 if command -v hub > /dev/null; then
   alias git=hub
 fi
+
+alias src='cd ~/src'
+
+# Homebase stuff
+alias hb='cd ~/src/hb'
+alias hb1='cd ~/src/hb/Homebase1'
