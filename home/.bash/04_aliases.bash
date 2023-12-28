@@ -7,8 +7,8 @@ if ls --version 2> /dev/null | grep -q GNU; then  # not on Mac
 else  # on Mac
   alias ls='ls -lG'
 fi
-alias lsl='ls -AF'
-alias lsa='ls -A'
+alias ll='ls -AF'
+alias la='ls -A'
 
 # color greps
 alias grep='grep --color=auto'
