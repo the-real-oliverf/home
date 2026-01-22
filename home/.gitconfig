@@ -1,6 +1,7 @@
 [user]
   name = Oliver Fisher
   email = oliver.fisher@gmail.com
+  signingkey = /home/oliverf/.ssh/id_ed25519.pub
 [color]
   branch = auto
   diff = auto
@@ -49,3 +50,11 @@
   navigate = true
   line-numbers = true
   side-by-side = true
+[commit]
+  gpgsign = true
+[tag]
+  gpgSign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = /home/oliverf/.ssh/allowed_signers
