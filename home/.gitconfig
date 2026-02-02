@@ -60,3 +60,5 @@
   format = ssh
 [gpg "ssh"]
   allowedSignersFile = /home/oliverf/.ssh/allowed_signers
+[init]
+	defaultBranch = main
