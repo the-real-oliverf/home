@@ -18,20 +18,38 @@ else  # on Mac
   NORMAL=$'\x1B[39m'
 fi
 
-for file in home/.[^.]*; do
-  path="$(pwd)/$file"
-  base=$(basename $file)
-  target="$HOME/$(basename $file)"
+# Logic to link a source node to a target node, recursing if both are directories
+function link_node {
+  local source=$1
+  local target=$2
+  local base=$(basename "$source")
 
-  if [[ -h $target && ($(readlink $target) == $path)]]; then
+  if [[ -d "$source" && -d "$target" && ! -L "$target" ]]; then
+    # Recurse into directory
+    echo -e "${GRAY}Recursing into $base...${NORMAL}"
+    for child in "$source"/*; do
+      if [ -e "$child" ]; then
+        link_node "$child" "$target/$(basename "$child")"
+      fi
+    done
+    return
+  fi
+
+  if [[ -h "$target" && ($(readlink "$target") == "$source") ]]; then
     echo -e "${GRAY}~/$base is symlinked to your dotfiles.${NORMAL}"
-  elif [[ -f $target && $(sha256sum $path | awk '{print $2}') == $(sha256sum $target | awk '{print $2}') ]]; then
+  elif [[ -f "$target" && -f "$source" && $(sha256sum "$source" | awk '{print $2}') == $(sha256sum "$target" | awk '{print $2}') ]]; then
     echo -e "${GREEN}~/$base exists and was identical to your dotfile.  Overriding with symlink.${NORMAL}"
-    symlink $path $target
-  elif [[ -a $target ]]; then
+    symlink "$source" "$target"
+  elif [[ -a "$target" ]]; then
     read -p "${YELLOW}/$base exists and differs from your dotfile. Skipping.${NORMAL}" -n 1
   else
     echo -e "${GREEN}~/$base does not exist. Symlinking to dotfile.${GREEN}"
-    symlink $path $target
+    symlink "$source" "$target"
   fi
+}
+
+for file in home/.[^.]*; do
+  path="$(pwd)/$file"
+  target="$HOME/$(basename "$file")"
+  link_node "$path" "$target"
 done
