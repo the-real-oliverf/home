@@ -2,6 +2,8 @@
   name = Oliver Fisher
   email = oliver.fisher@gmail.com
   signingkey = /home/oliverf/.ssh/id_ed25519.pub
+[includeIf "gitdir:**/cancap/**"]
+  path = ~/.gitconfig-cancap
 [color]
   branch = auto
   diff = auto
